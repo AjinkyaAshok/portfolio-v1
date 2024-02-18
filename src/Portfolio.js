@@ -206,7 +206,7 @@ const Portfolio = () => {
         <h1 className="text-[#a7a6a6]">
           CONTACT ME TODAY AND LET'S BRING YOUR VISION TO LIFE!
         </h1>
-        <a href="mailto:ajinkyaashokghate@gmail.com?subject=" target="_blank">
+        <a href="mailto:ajinkyaashokghate@gmail.com?subject=" target="_blank" rel="noreferrer">
           <button>[ GET IN TOUCH ]</button>
         </a>
       </section>
