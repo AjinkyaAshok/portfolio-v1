@@ -7,15 +7,21 @@ import gymBanner from "./gym-banner.png";
 const Portfolio = () => {
   const contactRef = useRef(null);
   const workRef = useRef(null);
+  const homeRef = useRef(null);
+
   const scrollContact = () => {
     contactRef.current.scrollIntoView({ behavior: "smooth" });
   };
   const scrollWork = () => {
     workRef.current.scrollIntoView({ behavior: "smooth" });
   };
+  const scrollHome = () => {
+    homeRef.current.scrollIntoView(false,{ behavior: "smooth" });
+  };
+
   return (
-    <div className="relative h-full w-full bg-[#0D0D0D] px-4 py-8 sm:px-3 md:px-8 lg:px-8">
-      <header className="flex justify-between text-white items-center">
+    <div  className="relative h-full w-full bg-[#0D0D0D] px-4 py-8 sm:px-3 md:px-8 lg:px-8">
+      <header ref={homeRef} className="flex justify-between text-white items-center">
         <h1 className="font-medium text-lg">AJINKYA ASHOK</h1>
         {/* <ul className="flex gap-x-2 lg:gap-x-4 md:gap-x-4 sm:gap-x-2  text-sm font-medium">
           <li>
@@ -96,7 +102,7 @@ const Portfolio = () => {
         </p>
       </section>
 
-      <footer className="text-[#FBFBFB] text-lg mt-36 flex justify-between items-center">
+      <footer ref={workRef} className="text-[#FBFBFB] text-lg mt-36 flex justify-between items-center">
         <h1 className="">2020 - PRESENT</h1>
 
         <div className="flex text-base flex-row gap-x-4">
@@ -144,7 +150,7 @@ const Portfolio = () => {
         </div>
       </footer>
 
-      <section ref={workRef}>
+      <section >
         <div>
           <h1 className="text-3xl mt-36 mb-10 text-white">
             SELECTED <span className="text-[#737373]">PROJECTS</span>{" "}
@@ -201,10 +207,10 @@ const Portfolio = () => {
       </section>
 
       <section
-        ref={contactRef}
+       
         className="flex flex-col gap-y-14 h-screen text-white text-center justify-center"
       >
-        <h1>GOT A PROJECT IN MIND?</h1>
+        <h1  ref={contactRef}>GOT A PROJECT IN MIND?</h1>
         <h1 className="tracking-tighter sm:text-5xl md:text-7xl lg:text-[150px] text-5xl  font-bebas font-semibold ">
           LET'S <span className="text-[#737373]">CONNECT</span>
         </h1>
@@ -224,7 +230,7 @@ const Portfolio = () => {
       <footer className="flex justify-between items-center">
         <ul className="text-white flex gap-4  text-sm font-medium">
           <li>
-            <a href="google.com">HOME</a>
+            <a href="google.com">IND - IE</a>
           </li>
         </ul>
 
@@ -237,11 +243,8 @@ const Portfolio = () => {
           </h1>
         </div>
 
-        <ul className="text-white flex gap-4  text-sm font-medium">
-          <li>
-            <a href="google.com">HOME</a>
-          </li>
-        </ul>
+            <button className="text-white flex gap-4  text-sm font-medium" onClick={scrollHome}>HOME</button>
+       
       </footer>
     </div>
   );
