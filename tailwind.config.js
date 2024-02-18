@@ -9,10 +9,17 @@ module.exports = {
     },
     extend: {
       keyframes: {
+        slideUp: {
+          '0%': { transform: 'translateY(100%)' },
+          '100%': { transform: 'translateY(0%)' },
+        },
+        slideDown: {
+          '0%': { transform: 'translateY(-100%)' },
+          '100%': { transform: 'translateY(0%)' },
+        },
         wiggle: {
           "0%": { transform: "rotateY(0deg)" },
-          "50%": { transform: "rotateY(30deg)" },
-          "75%": { transform: "rotateY(-30deg)" },
+          "50%": { transform: "rotateY(15deg)" },
           "100%": { transform: "rotateY(0deg)" },
         },
         move:{
@@ -23,6 +30,8 @@ module.exports = {
       animation: {
         "wiggle": "wiggle 10s linear infinite",
         "move": "move 10s linear infinite",
+        'slideUp': 'slideUp 0.3s ease-out',
+        'slideDown': 'slideDown 0.3s ease-out',
       },
     
     },
