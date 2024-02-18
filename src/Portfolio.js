@@ -1,15 +1,17 @@
 import React, { useRef } from "react";
 import MainImage from "./passport.jpg";
 import dashdineBanner from "./dashdine-banne.png";
+import cssBanner from "./css-banner.png";
+import gymBanner from "./gym-banner.png";
 
 const Portfolio = () => {
   const contactRef = useRef(null);
   const workRef = useRef(null);
   const scrollContact = () => {
-    contactRef.current.scrollIntoView({ behavior: 'smooth' });
+    contactRef.current.scrollIntoView({ behavior: "smooth" });
   };
   const scrollWork = () => {
-    workRef.current.scrollIntoView({ behavior: 'smooth' });
+    workRef.current.scrollIntoView({ behavior: "smooth" });
   };
   return (
     <div className="relative h-full w-full bg-[#0D0D0D] px-4 py-8 sm:px-3 md:px-8 lg:px-8">
@@ -38,7 +40,10 @@ const Portfolio = () => {
           <div className="relative inline-block  hover:-translate-y-5 hover:text-transparent ease-linear transition duration-150">
             <p className="">WORK</p>
 
-            <button onClick={scrollWork} className="absolute bottom-0 hover:translate-y-5 hover:text-[#737373] text-transparent ease-linear transition  duration-150">
+            <button
+              onClick={scrollWork}
+              className="absolute bottom-0 hover:translate-y-5 hover:text-[#737373] text-transparent ease-linear transition  duration-150"
+            >
               WORK
             </button>
           </div>
@@ -46,7 +51,10 @@ const Portfolio = () => {
           <div className="relative inline-block  hover:-translate-y-5 hover:text-transparent ease-linear transition duration-150">
             <p className="">CONTACT</p>
 
-            <button onClick={scrollContact} className="absolute bottom-0 hover:translate-y-5 hover:text-[#737373] text-transparent ease-linear transition  duration-150">
+            <button
+              onClick={scrollContact}
+              className="absolute bottom-0 hover:translate-y-5 hover:text-[#737373] text-transparent ease-linear transition  duration-150"
+            >
               CONTACT
             </button>
           </div>
@@ -96,7 +104,13 @@ const Portfolio = () => {
             <p className="">LINKEDIN</p>
 
             <p className="absolute bottom-0 hover:translate-y-5 hover:text-[#737373] text-transparent ease-linear transition  duration-150">
-              <a href="https://www.linkedin.com/in/ajinkyaa/" target="_blank" rel="noreferrer">LINKEDIN</a>
+              <a
+                href="https://www.linkedin.com/in/ajinkyaa/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                LINKEDIN
+              </a>
             </p>
           </div>
 
@@ -104,7 +118,13 @@ const Portfolio = () => {
             <p className="">GITHUB</p>
 
             <p className="absolute bottom-0 hover:translate-y-5 hover:text-[#737373] text-transparent ease-linear transition  duration-150">
-              <a href="https://github.com/AjinkyaAshok" target="_blank" rel="noreferrer">GITHUB</a>
+              <a
+                href="https://github.com/AjinkyaAshok"
+                target="_blank"
+                rel="noreferrer"
+              >
+                GITHUB
+              </a>
             </p>
           </div>
 
@@ -112,7 +132,11 @@ const Portfolio = () => {
             <p className="">MEDIUM</p>
 
             <p className="absolute bottom-0 hover:translate-y-5 hover:text-[#737373] text-transparent ease-linear transition  duration-150">
-              <a href="https://medium.com/@ajinkyaashokghate/i-fought-5404e126f065" target="_blank" rel="noreferrer">
+              <a
+                href="https://medium.com/@ajinkyaashokghate/i-fought-5404e126f065"
+                target="_blank"
+                rel="noreferrer"
+              >
                 MEDIUM
               </a>
             </p>
@@ -129,33 +153,57 @@ const Portfolio = () => {
 
         <div className="text-white flex flex-wrap justify-around gap-y-10 ap-10  ">
           <div className="relativ space-y-2 hover:scale-95 w-96 duration-300 transition-transform ease-in-out">
-            <img className="absolut " src={dashdineBanner} alt="" />
+            <a
+              href="https://dashdine.netlify.app/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              {" "}
+              <img className="absolut " src={dashdineBanner} alt="" />
+            </a>
 
             <div className="flex justify-between">
-              <h1 className="hover:translate-y-5">DASHDINE</h1>
-              <h1>FOOD DELIVERY - 2023</h1>
+              <h1 className="">DASHDINE</h1>
+              <h1>FOOD DELIVERY - 2024</h1>
             </div>
           </div>
 
           <div className="relativ space-y-2 hover:scale-95 w-96 duration-300 transition-transform ease-in-out">
-            <img className="w-96" src={MainImage} alt="" />
+            <a
+              href="https://dashdine.netlify.app/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              {" "}
+              <img className="w-96" src={cssBanner} alt="" />
+            </a>
             <div className="flex justify-between">
-              <h1>OUTDOOR</h1>
-              <h1>BARANDING - 2023</h1>
+              <h1>CSS STUDIO</h1>
+              <h1>SHOWCASE - 2023</h1>
             </div>
           </div>
 
           <div className="relativ space-y-2 hover:scale-95 w-96 duration-300 transition-transform ease-in-out">
-            <img className="w-96" src={MainImage} alt="" />
+            <a
+              href="https://dashdine.netlify.app/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              {" "}
+              <img className="w-96" src={gymBanner} alt="" />
+            </a>
             <div className="flex justify-between">
-              <h1>OUTDOOR</h1>
-              <h1>BARANDING - 2023</h1>
+              <h1>GYM PORTAL</h1>
+              <h1>BRANDING - 2023</h1>
             </div>
           </div>
         </div>
       </section>
 
-      <section ref={contactRef} className="flex flex-col gap-y-14 h-screen text-white text-center justify-center">
+      <section
+        ref={contactRef}
+        className="flex flex-col gap-y-14 h-screen text-white text-center justify-center"
+      >
         <h1>GOT A PROJECT IN MIND?</h1>
         <h1 className="tracking-tighter sm:text-5xl md:text-7xl lg:text-[150px] text-5xl  font-bebas font-semibold ">
           LET'S <span className="text-[#737373]">CONNECT</span>
