@@ -170,7 +170,7 @@ const Portfolio = () => {
 
           <div className="relativ space-y-2 hover:scale-95 w-96 duration-300 transition-transform ease-in-out">
             <a
-              href="https://dashdine.netlify.app/"
+              href="https://cssstudio.netlify.app/"
               target="_blank"
               rel="noreferrer"
             >
@@ -199,7 +199,15 @@ const Portfolio = () => {
       </section>
 
       <section className="flex flex-col gap-y-14 h-screen text-white text-center justify-center">
-        <h1 ref={contactRef}>GOT A PROJECT IN MIND?</h1>
+      <section ref={contactRef}>
+        <div className="mx-auto lg:w-1/3 md:w-1/3 w-1/2 overflow-hidden text-white mt-16">
+          <div className="flex lg:animate-[move_6s_linear_infinite] md:animate-[move_6s_linear_infinite] animate-[move_3s_linear_infinite] ">
+            <div className="whitespace-nowrap  text-[#a7a6a6]">
+              AVAILABLE FOR WORK ・ AVAILABLE FOR WORK ・ AVAILABLE FOR WORK ・ AVAILABLE FOR WORK ・ AVAILABLE FOR WORK ・ AVAILABLE FOR WORK ・ 
+            </div>
+          </div>
+        </div>
+      </section>
         <h1 className="tracking-tighter sm:text-5xl md:text-7xl lg:text-[150px] text-5xl  font-bebas font-semibold ">
           LET'S <span className="text-[#737373]">CONNECT</span>
         </h1>
