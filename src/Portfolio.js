@@ -63,8 +63,9 @@ const Portfolio = () => {
         <div className="mx-auto lg:w-1/3 md:w-1/3 w-1/2 overflow-hidden text-white mt-16">
           <div className="flex lg:animate-[move_6s_linear_infinite] md:animate-[move_6s_linear_infinite] animate-[move_3s_linear_infinite] ">
             <div className="whitespace-nowrap  text-[#a7a6a6]">
-              UI/UX ・ REACT JS ・ BRANDING ・ WEB ・ UI/UX ・ REACT JS ・
-              BRANDING ・ WEB ・ UI/UX ・ REACT JS ・ BRANDING ・ WEB
+              SOFTWARE ENGINEERING ・ UI/UX ・ REACT JS ・ BRANDING ・ WEB ・
+              SOFTWARE ENGINEERING ・ UI/UX ・ REACT JS ・ BRANDING ・ WEB ・
+              SOFTWARE ENGINEERING ・ UI/UX ・ REACT JS ・ BRANDING ・ WEB ・
             </div>
           </div>
         </div>
@@ -72,8 +73,8 @@ const Portfolio = () => {
 
       <section className="flex items-center justify-center p-10">
         <div className="flex flex-col animate-[wiggle_5s_linear_infinite] tracking-tighter text-right font-bebas left- right- sm:text-5xl md:text-7xl lg:text-[160px] text-6xl">
-          <h1 className="text-white font-semibold">FRONTEND</h1>
-          <h1 className="text-[#737373] font-semibold">DEVELOPER</h1>
+          <h1 className="text-white font-semibold">SOFTWARE</h1>
+          <h1 className="text-[#737373] font-semibold">ENGINEER</h1>
         </div>
         <img
           className=" shadow-white nimate-[wiggle_2s_linear_infinite]  lg:w-52 md:w-36 sm:w-32 w-14"
@@ -85,12 +86,16 @@ const Portfolio = () => {
       <section className="flex flex-col gap-y-3 text-lg text-center mt-12 text-white lg:px-96">
         <p>Hello</p>
         <p className="w-auto flex-grow">
-          I'm Ajinkya Ashok, a skilled frontend developer dedicated to crafting
-          visually captivating and responsive user interfaces. With expertise in
-          HTML, CSS, and JavaScript, coupled with a strong design sensibility, I
-          strive to deliver outstanding user experiences. My history showcases
-          successful collaborations with diverse teams to realize innovative web
-          solutions.
+          About Me I’m a frontend-focused Software Engineer passionate about
+          building scalable, high-performance web applications with React.js,
+          Next.js, TypeScript, and Tailwind CSS. I specialize in creating
+          seamless UI/UX experiences, optimizing performance, and integrating
+          RESTful APIs & GraphQL for smooth backend connectivity. With a
+          Master’s in Business Analytics, I blend technical expertise with
+          data-driven decision-making to craft intelligent, user-centric
+          solutions. Experienced in Agile development and CI/CD pipelines, I
+          thrive on building impactful digital experiences. Let’s create
+          something great! 🚀
         </p>
       </section>
 
@@ -199,22 +204,28 @@ const Portfolio = () => {
       </section>
 
       <section className="flex flex-col gap-y-14 h-screen text-white text-center justify-center">
-      <section ref={contactRef}>
-        <div className="mx-auto lg:w-1/3 md:w-1/3 w-1/2 overflow-hidden text-white mt-16">
-          <div className="flex lg:animate-[move_6s_linear_infinite] md:animate-[move_6s_linear_infinite] animate-[move_3s_linear_infinite] ">
-            <div className="whitespace-nowrap  text-[#a7a6a6]">
-              AVAILABLE FOR WORK ・ AVAILABLE FOR WORK ・ AVAILABLE FOR WORK ・ AVAILABLE FOR WORK ・ AVAILABLE FOR WORK ・ AVAILABLE FOR WORK ・ 
+        <section ref={contactRef}>
+          <div className="mx-auto lg:w-1/3 md:w-1/3 w-1/2 overflow-hidden text-white mt-16">
+            <div className="flex lg:animate-[move_6s_linear_infinite] md:animate-[move_6s_linear_infinite] animate-[move_3s_linear_infinite] ">
+              <div className="whitespace-nowrap  text-[#a7a6a6]">
+                AVAILABLE FOR WORK ・ AVAILABLE FOR WORK ・ AVAILABLE FOR WORK
+                ・ AVAILABLE FOR WORK ・ AVAILABLE FOR WORK ・ AVAILABLE FOR
+                WORK ・
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
         <h1 className="tracking-tighter sm:text-5xl md:text-7xl lg:text-[150px] text-5xl  font-bebas font-semibold ">
           LET'S <span className="text-[#737373]">CONNECT</span>
         </h1>
         <h1 className="text-[#a7a6a6]">
           CONTACT ME TODAY AND LET'S BRING YOUR VISION TO LIFE!
         </h1>
-        <a href="mailto:ajinkyaashokghate@gmail.com?subject=" target="_blank" rel="noreferrer">
+        <a
+          href="mailto:ajinkyaashokghate@gmail.com?subject="
+          target="_blank"
+          rel="noreferrer"
+        >
           <button>[ GET IN TOUCH ]</button>
         </a>
       </section>
