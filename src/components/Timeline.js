@@ -1,5 +1,4 @@
 import { useRef, useEffect } from "react";
-import Image from "../images/css-banner.png"
 export default function InfiniteScrollCards() {
   const scrollRef = useRef(null);
 

@@ -1,16 +1,12 @@
-import React, { useRef } from "react";
+import React,  from "react";
 
-import Headerv2 from "./components/Headerv2";
-import Timeline from "./components/Timeline";
-import Projects from "./components/Projects";
+
 import Footer from "./components/Footer";
 import HeroSectionSpotlight from "./components/HeroSectionSpotlight";
 import HeroSectionFlipWords from "./components/HeroSectionFlipWords";
-import { FollowingPointerDemo } from "./components/Cards";
-import Card from "./components/Timeline";
-import ProjectSectionNew from "./components/ProjectSectionNew";
+
 import ContactSection from "./components/Contacts";
-import Experience, { AnimatedTestimonialsDemo } from "./components/Experience";
+import { AnimatedTestimonialsDemo } from "./components/Experience";
 
 const Portfolio = () => {
   // const contactRef = useRef(null);

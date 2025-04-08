@@ -1,6 +1,4 @@
-import dashdineBanner from "../images/dashdine-banne.png";
-import cssBanner from "../images/css-banner.png";
-import gymBanner from "../images/gym-banner.png";
+
 import React from "react";
 import { StickyScroll } from "../ui/sticky-scroll-reveal";
 // import Image from "next/image";

@@ -1,23 +1,12 @@
 import React, { useRef } from "react";
-import MainImage from "../images/passport.jpg";
+
 import { cn } from "../utils/utils";
 
-import { TextGenerateEffect } from "../ui/text-generate-effect";
-import { FlipWords } from "../ui/flip-words";
+
 import { Spotlight } from "../ui/Spotlight";
 import Headerv2 from "./Headerv2";
-import HeroSectionFlipWords from "./HeroSectionFlipWords";
 
-const word = ` About Me I’m a frontend-focused Software Engineer passionate about
-          building scalable, high-performance web applications with React.js,
-          Next.js, TypeScript, and Tailwind CSS. I specialize in creating
-          seamless UI/UX experiences, optimizing performance, and integrating
-          RESTful APIs & GraphQL for smooth backend connectivity. With a
-          Master’s in Business Analytics, I blend technical expertise with
-          data-driven decision-making to craft intelligent, user-centric
-          solutions. Experienced in Agile development and CI/CD pipelines, I
-          thrive on building impactful digital experiences. Let’s create
-          something great! 🚀`;
+
 const HeroSectionSpotlight = () => {
   const homeRef = useRef(null);
   const aboutRef = useRef(null);
