@@ -1,144 +1,33 @@
-
-import React from "react";
-import { StickyScroll } from "../ui/sticky-scroll-reveal";
-// import Image from "next/image";
-
-export default function Projects() {
-  const content = [
+import { AnimatedTestimonials } from "../ui/animated-testimonials";
+import Image from "../images/dashdine_app_banner.png";
+export function AnimatedProjectsScroll() {
+  const testimonials = [
     {
-      title: "Collaborative Editing",
-      description:
-        "Work together in real time with your team, clients, and stakeholders. Collaborate on documents, share ideas, and make decisions quickly. With our platform, you can streamline your workflow and increase productivity.",
-      content: (
-        <div className="flex h-full w-full items-center justify-center bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] text-white">
-          Collaborative Editing
-        </div>
-      ),
+      quote:
+        "Tackled delivery delays at building entrances by designing a Delivery Access Management prototype aimed at streamlining check-ins for food delivery agents across residential and commercial complexes.",
+      name: "Check-Inn Optimization for Delivery Apps",
+      link: "https://www.figma.com/community/file/1473705913486771548",
+      designation: "Case Study",
+      src: "https://s3-figma-hubfile-images-production.figma.com/hub/file/carousel/img/40ab4a62bf8e37e8df9d8fb26b2f9d112098ffcb/d13d493611ea393573e7f3d7fc37f9ba8a8fbe1a",
     },
     {
-      title: "Real time changes",
-      description:
-        "See changes as they happen. With our platform, you can track every modification in real time. No more confusion about the latest version of your project. Say goodbye to the chaos of version control and embrace the simplicity of real-time updates.",
-      content: (
-        <div className="flex h-full w-full items-center justify-center text-white">
-          {/* <Image
-            src="/linear.webp"
-            width={300}
-            height={300}
-            className="h-full w-full object-cover"
-            alt="linear board demo"
-          /> */}
-        </div>
-      ),
+      quote:
+        "Designed and developed end-to-end platform using Figma, React.js, Redux. Improved UX via enhanced filtering and streamlined order flows.",
+      name: "Dash Dine",
+      link: "dashdine.netlify.app",
+      designation: "Food Delivery Web App",
+      src: Image,
     },
+  
     {
-      title: "Version control",
-      description:
-        "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
-      content: (
-        <div className="flex h-full w-full items-center justify-center bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] text-white">
-          Version control
-        </div>
-      ),
+      quote:
+        "Created “Tindog,” a playful concept inspired by Tinder for dogs, to demonstrate creative UI design and user flow skills in a fun, engaging format. ",
+      name: "Tindog",
+      link: "https://www.figma.com/community/file/1491455039743664381",
+      designation: "Concept Prototyping",
+      src: "https://s3-figma-hubfile-images-production.figma.com/hub/file/carousel/img/a7feea485ae7fc505784030fe5e5c1928855940a/e3f15078d8486e3358b151ad2a7cb8e866ee456e",
     },
-    {
-      title: "Running out of content",
-      description:
-        "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
-      content: (
-        <div className="flex h-full w-full items-center justify-center bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] text-white">
-          Running out of content
-        </div>
-      ),
-    },
+  
   ];
-  return (
-    <div>
-      <div className="w-full py-4 ">
-        <StickyScroll content={content} />
-      </div>
-
-      {/* {" "}
-      <section>
-        <div>
-          <h1 className="text-3xl mt-36 mb-10 text-white">
-            SELECTED <span className="text-[#737373]">PROJECTS</span>
-          </h1>
-        </div>
-
-        <div className="text-white flex flex-wrap justify-around gap-y-10 ap-10  ">
-          <div className="relativ space-y-2 hover:scale-95 w-96 duration-300 transition-transform ease-in-out">
-            <a
-              href="https://dashdine.netlify.app/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img className="absolut " src={dashdineBanner} alt="" />
-            </a>
-
-            <div className="flex justify-between">
-              <h1 className="">DASHDINE</h1>
-              <h1>FOOD DELIVERY - 2024</h1>
-            </div>
-          </div>
-
-          <div className="relativ space-y-2 hover:scale-95 w-96 duration-300 transition-transform ease-in-out">
-            <a
-              href="https://cssstudio.netlify.app/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img className="w-96" src={cssBanner} alt="" />
-            </a>
-            <div className="flex justify-between">
-              <h1>CSS STUDIO</h1>
-              <h1>SHOWCASE - 2023</h1>
-            </div>
-          </div>
-
-          <div className="relativ space-y-2 hover:scale-95 w-96 duration-300 transition-transform ease-in-out">
-            <a
-              href="https://dashdine.netlify.app/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img className="w-96" src={gymBanner} alt="" />
-            </a>
-            <div className="flex justify-between">
-              <h1>GYM PORTAL</h1>
-              <h1>BRANDING - 2023</h1>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="flex flex-col gap-y-14 h-screen text-white text-center justify-center">
-        <section 
-        // ref={contactRef}
-        >
-          <div className="mx-auto lg:w-1/3 md:w-1/3 w-1/2 overflow-hidden text-white mt-16">
-            <div className="flex lg:animate-[move_6s_linear_infinite] md:animate-[move_6s_linear_infinite] animate-[move_3s_linear_infinite] ">
-              <div className="whitespace-nowrap  text-[#a7a6a6]">
-                AVAILABLE FOR WORK ・ AVAILABLE FOR WORK ・ AVAILABLE FOR WORK
-                ・ AVAILABLE FOR WORK ・ AVAILABLE FOR WORK ・ AVAILABLE FOR
-                WORK ・
-              </div>
-            </div>
-          </div>
-        </section>
-        <h1 className="tracking-tighter sm:text-5xl md:text-7xl lg:text-[150px] text-5xl  font-bebas font-semibold ">
-          LET'S <span className="text-[#737373]">CONNECT</span>
-        </h1>
-        <h1 className="text-[#a7a6a6]">
-          CONTACT ME TODAY AND LET'S BRING YOUR VISION TO LIFE!
-        </h1>
-        <a
-          href="mailto:ajinkyaashokghate@gmail.com?subject="
-          target="_blank"
-          rel="noreferrer"
-        >
-          <button>[ GET IN TOUCH ]</button>
-        </a>
-      </section> */}
-    </div>
-  );
+  return <AnimatedTestimonials testimonials={testimonials} />;
 }
