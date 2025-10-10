@@ -1,6 +1,6 @@
 import React from "react";
 import { FlipWords } from "../ui/flip-words";
-export default function HeroSectionFlipWords() {
+const HeroSectionSecondary = () => {
   const words = ["responsive", "modern", "beautiful", "stable"];
 
   return (
@@ -27,4 +27,5 @@ export default function HeroSectionFlipWords() {
       </aside>
     </section>
   );
-}
+};
+export default HeroSectionSecondary;

@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function ContactSection() {
+const ContactSection = () => {
   return (
     <section
       className="bg-black py-24 px-4 md:px-12 flex flex-col items-center justify-center 
@@ -19,7 +19,7 @@ export default function ContactSection() {
         <a
           href="mailto:ajinkyaashokghate@gmail.com"
           aria-label="Send an email to Ajinkya Ashok Ghate"
-          className="text-3xl md:text-5xl lg:text-6xl font-semibold 
+          className="text-2xl md:text-5xl lg:text-6xl font-semibold 
                      text-white hover:text-[#909090] transition-colors duration-300 ease-in-out 
                      break-words text-center"
         >
@@ -28,5 +28,6 @@ export default function ContactSection() {
       </div>
     </section>
   );
-}
+};
 
+export default ContactSection;

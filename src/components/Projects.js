@@ -1,6 +1,6 @@
 import { AnimatedTestimonials } from "../ui/animated-testimonials";
 import Image from "../images/dashdine_app_banner.png";
-export function AnimatedProjectsScroll() {
+export function AnimatedProjectsScroll({projectsRef}) {
   const testimonials = [
     {
       quote:
@@ -29,5 +29,5 @@ export function AnimatedProjectsScroll() {
     },
   
   ];
-  return <AnimatedTestimonials testimonials={testimonials} />;
+  return <AnimatedTestimonials ref={projectsRef} testimonials={testimonials} />;
 }

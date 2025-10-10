@@ -1,37 +1,41 @@
-import React from "react";
+import React, { useRef } from "react";
 import Footer from "./components/Footer";
-import HeroSectionSpotlight from "./components/HeroSectionSpotlight";
-import HeroSectionFlipWords from "./components/HeroSectionFlipWords";
-
+import HeroSectionMain from "./components/HeroSectionMain";
+import HeroSectionSecondary from "./components/HeroSectionSecondary";
 import ContactSection from "./components/Contact";
 import { AnimatedProjectsScroll } from "./components/Projects";
-
+import Header from "./components/Header";
 
 const Portfolio = () => {
-  // const contactRef = useRef(null);
-  // const workRef = useRef(null);
-  // const homeRef = useRef(null);
-
-  // const scrollContact = () => {
-  //   contactRef.current.scrollIntoView({ behavior: "smooth" });
-  // };
-  // const scrollWork = () => {
-  //   workRef.current.scrollIntoView({ behavior: "smooth" });
-  // };
-
-  // const scrollHome = () => {
-  //   homeRef.current.scrollIntoView(false, { behavior: "smooth" });
-  // };
+  const refsMap = {
+    Home: useRef(null),
+    About: useRef(null),
+    Projects: useRef(null),
+    Contact: useRef(null),
+  };
 
   return (
     <div className="bg-[#0D0D0D]">
-      {/* ogi */}
-      {/* <div className="relative h-full w-full bg-[#0D0D0D] px-4 py-8 sm:px-3 md:px-8 lg:px-8"> */}
-      <div className="lg:w-8/12  m-auto shadow-2xl shadow-black bg-[#0D0D0D] ">
-        <HeroSectionSpotlight />
-        <HeroSectionFlipWords />
-        <AnimatedProjectsScroll />
-        <ContactSection />
+      
+      <div className="lg:w-8/12 m-auto shadow-2xl  shadow-black bg-[#0D0D0D] ">
+        <Header refsMap={refsMap} />
+
+        <section ref={refsMap.Home}>
+          <HeroSectionMain />
+        </section>
+
+        <section ref={refsMap.About}>
+          <HeroSectionSecondary />
+        </section>
+
+        <section ref={refsMap.Projects}>
+          <AnimatedProjectsScroll />
+        </section>
+
+        <section ref={refsMap.Contact}>
+          <ContactSection />
+        </section>
+        
         <Footer />
       </div>
     </div>
