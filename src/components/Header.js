@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import MainImage from "../images/user_profile_picture.jpg";
 
-const NAV_ITEMS = ["Home", "About", "Projects", "Contact"];
+const NAV_ITEMS = ["Home", "About", "Career", "Projects", "Contact"];
 
 const Header = ({ refsMap }) => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -17,7 +17,7 @@ const Header = ({ refsMap }) => {
       initial={{ y: -50, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="sticky top-10 mx-auto
+      className="sticky top-3 md:top-7 lg:top-10 mx-auto
                  w-11/12 max-w-6xl flex justify-between items-center
                  px-5 h-20 z-50 bg-white/10 border border-white/20
                  backdrop-blur-md drop-shadow-lg text-white/80 rounded-2xl"

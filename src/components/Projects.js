@@ -14,7 +14,7 @@ export function AnimatedProjectsScroll({projectsRef}) {
       quote:
         "Designed and developed end-to-end platform using Figma, React.js, Redux. Improved UX via enhanced filtering and streamlined order flows.",
       name: "Dash Dine",
-      link: "dashdine.netlify.app",
+      link: "https://dashdine.netlify.app",
       designation: "Food Delivery Web App",
       src: Image,
     },

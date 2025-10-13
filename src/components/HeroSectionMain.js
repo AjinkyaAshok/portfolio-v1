@@ -21,7 +21,7 @@ const HeroSectionMain = () => {
       <Spotlight className="-top-40 left-0 md:-top-20 md:left-60" fill="white" />
 
       {/* Main Content */}
-      <div className="relative z-10 mx-auto w-full max-w-7xl p-4 text-center">
+      <div className="relative z-10 mx-auto w-full max-w-7xl p-4 top-14 md:top-0 text-center">
         <h1 className="bg-gradient-to-b from-neutral-50 to-neutral-400 
                        bg-clip-text text-4xl font-bold text-transparent 
                        md:text-7xl leading-tight tracking-tight">

@@ -5,18 +5,20 @@ import HeroSectionSecondary from "./components/HeroSectionSecondary";
 import ContactSection from "./components/Contact";
 import { AnimatedProjectsScroll } from "./components/Projects";
 import Header from "./components/Header";
+import CareerTimeline from "./components/CareerTimeline";
+
 
 const Portfolio = () => {
   const refsMap = {
     Home: useRef(null),
     About: useRef(null),
+    Career: useRef(null),
     Projects: useRef(null),
     Contact: useRef(null),
   };
 
   return (
     <div className="bg-[#0D0D0D]">
-      
       <div className="lg:w-8/12 m-auto shadow-2xl  shadow-black bg-[#0D0D0D] ">
         <Header refsMap={refsMap} />
 
@@ -28,6 +30,10 @@ const Portfolio = () => {
           <HeroSectionSecondary />
         </section>
 
+        <section ref={refsMap.Career}>
+          <CareerTimeline timelineRef={refsMap.Career} />
+        </section>
+
         <section ref={refsMap.Projects}>
           <AnimatedProjectsScroll />
         </section>
@@ -35,7 +41,7 @@ const Portfolio = () => {
         <section ref={refsMap.Contact}>
           <ContactSection />
         </section>
-        
+
         <Footer />
       </div>
     </div>
