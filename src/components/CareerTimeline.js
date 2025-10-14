@@ -3,23 +3,23 @@ import { motion, useScroll, useSpring } from "framer-motion";
 
 const careerData = [
   {
-    role: "Frontend Developer",
-    company: "Tech Company A",
-    duration: "Jan 2024 – Present",
-    description:
-      "Building and optimizing scalable web apps using React, Next.js, and Tailwind CSS. Collaborating with cross-functional teams to deliver pixel-perfect UI/UX.",
-  },
-  {
     role: "Software Engineer",
-    company: "Startup B",
-    duration: "Jul 2022 – Dec 2023",
+    company: "Procohat Technologies",
+    duration: "Oct 2021 – Aug 2022",
     description:
-      "Developed and maintained modern web applications with React, TypeScript, and GraphQL. Improved performance and accessibility across multiple products.",
+      "Built and optimized scalable React applications using React, Redux, and Tailwind CSS. Improved efficiency by 20%, collaborated with cross-functional teams, and delivered data-driven insights.",
   },
   {
-    role: "Intern",
-    company: "Company C",
-    duration: "Jan 2022 – Jun 2022",
+    role: "Frontend Developer",
+    company: "Quanscendence Technologies",
+    duration: "Apr 2020 – Oct 2021",
+    description:
+      "Contributed to an EdTech startup using React, Tailwind, and GraphQL; improved app responsiveness by 25%, enhanced UX, and reduced development time by 20%.",
+  },
+  {
+    role: "Software Development Intern",
+    company: "Anadigi Corp.",
+    duration: "May 2019 – JUly 2019",
     description:
       "Assisted in building frontend components and learned best practices for scalable, maintainable codebases.",
   },
