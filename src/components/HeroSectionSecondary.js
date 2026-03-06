@@ -3,21 +3,21 @@ import { motion } from "framer-motion";
 import ProfileImage from "../images/user_profile_picture.jpg";
 
 const HeroSectionSecondary = () => {
-  // PLACEHOLDER: Your skills data
   const skills = [
-    { name: "React" },
-    { name: "TypeScript" },
+    { name: "React.js" },
     { name: "Next.js" },
+    { name: "TypeScript" },
     { name: "Tailwind CSS" },
-    { name: "Node.js" },
+    { name: "Redux Toolkit" },
     { name: "GraphQL" },
+    { name: "TanStack Query" },
+    { name: "Vercel AI SDK" },
   ];
 
-  // PLACEHOLDER: Your stats/metrics
   const stats = [
     { value: "3+", label: "Years Experience" },
-    { value: "20+", label: "Projects Completed" },
-    { value: "15+", label: "Happy Clients" },
+    { value: "20%", label: "Faster Load Times" },
+    { value: "35%", label: "Bundle Size Reduced" },
   ];
 
   const containerVariants = {
@@ -48,7 +48,6 @@ const HeroSectionSecondary = () => {
             About
           </span>
           <h2 className="text-3xl md:text-4xl font-display font-bold text-white mt-2">
-            {/* PLACEHOLDER: Section title */}
             A bit about me
           </h2>
         </motion.div>
@@ -68,7 +67,6 @@ const HeroSectionSecondary = () => {
                        hover:border-white/10 transition-all duration-300"
           >
             <div className="flex flex-col md:flex-row gap-6">
-              {/* PLACEHOLDER: Your profile image */}
               <img
                 src={ProfileImage}
                 alt="Profile"
@@ -76,16 +74,12 @@ const HeroSectionSecondary = () => {
               />
               <div className="flex-1">
                 <h3 className="text-xl font-semibold text-white mb-3">
-                  {/* PLACEHOLDER: Your name */}
-                  Ajinkya Ashok
+                  Ajinkya Ghate
                 </h3>
                 <p className="text-neutral-400 leading-relaxed">
-                  {/* PLACEHOLDER: Your bio paragraph */}
-                  Frontend-focused Software Engineer with expertise in React, Next.js, 
-                  TypeScript, and Tailwind CSS. I specialize in building scalable, 
-                  high-performance web applications with seamless UI/UX experiences. 
-                  With a Master's in Business Analytics, I combine technical skills 
-                  with data-driven insights to create impactful digital solutions.
+                  Frontend Engineer with 3+ years building production React and Next.js applications. 
+                  Reduced API response times by ~20% and cut bundle sizes through route-based code splitting. 
+                  MSc in Business Analytics from University of Galway — I combine technical depth with data-driven insights.
                 </p>
               </div>
             </div>
@@ -143,8 +137,7 @@ const HeroSectionSecondary = () => {
             <h3 className="text-sm font-medium text-neutral-500 uppercase tracking-wider mb-4">
               Location
             </h3>
-            {/* PLACEHOLDER: Your location */}
-            <p className="text-xl font-semibold text-white mb-1">United States</p>
+            <p className="text-xl font-semibold text-white mb-1">Pune, India</p>
             <p className="text-sm text-neutral-500">Remote friendly</p>
           </motion.div>
 
@@ -158,12 +151,11 @@ const HeroSectionSecondary = () => {
             <h3 className="text-sm font-medium text-neutral-500 uppercase tracking-wider mb-4">
               Currently
             </h3>
-            {/* PLACEHOLDER: What you're currently doing/learning */}
             <p className="text-xl font-semibold text-white mb-1">
               Open to Work
             </p>
             <p className="text-sm text-neutral-400">
-              Looking for Frontend Engineer roles
+              Frontend / Full-Stack roles
             </p>
           </motion.div>
         </motion.div>

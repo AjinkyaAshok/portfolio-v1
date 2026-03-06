@@ -2,14 +2,13 @@ import React from "react";
 import { motion } from "framer-motion";
 import { ExternalLink, Github, ArrowUpRight } from "lucide-react";
 
-// PLACEHOLDER: Your projects data
 const projectsData = [
   {
     title: "Check-Inn Optimization",
     description:
-      "Delivery Access Management prototype aimed at streamlining check-ins for food delivery agents across residential and commercial complexes.",
+      "UX case study for delivery access management. Researched Blinkit/Zepto delivery flows to prototype streamlined check-ins for residential and commercial complexes.",
     image: "https://s3-figma-hubfile-images-production.figma.com/hub/file/carousel/img/40ab4a62bf8e37e8df9d8fb26b2f9d112098ffcb/d13d493611ea393573e7f3d7fc37f9ba8a8fbe1a",
-    tags: ["Case Study", "UX Design", "Figma"],
+    tags: ["Case Study", "UX Research", "Figma"],
     liveUrl: "https://www.figma.com/community/file/1473705913486771548",
     githubUrl: "",
     featured: true,
@@ -17,24 +16,23 @@ const projectsData = [
   {
     title: "Dash Dine",
     description:
-      "Designed and developed end-to-end food delivery platform using React.js and Redux. Improved UX via enhanced filtering and streamlined order flows.",
-    image: "", // PLACEHOLDER: Add your project image path
-    tags: ["React", "Redux", "Tailwind CSS", "Full Stack"],
+      "Full-stack food delivery app built with React and Redux Toolkit. Implemented state architecture, memoization, and lazy loading for optimized performance.",
+    image: "",
+    tags: ["React", "Redux Toolkit", "Tailwind CSS"],
     liveUrl: "https://dashdine.netlify.app",
-    githubUrl: "", // PLACEHOLDER: GitHub URL
+    githubUrl: "",
     featured: true,
   },
   {
     title: "Tindog",
     description:
-      "A playful concept inspired by Tinder for dogs, demonstrating creative UI design and user flow skills in a fun, engaging format.",
+      "A playful Tinder-for-dogs concept demonstrating creative UI design, swipe interactions, and engaging user flows.",
     image: "https://s3-figma-hubfile-images-production.figma.com/hub/file/carousel/img/a7feea485ae7fc505784030fe5e5c1928855940a/e3f15078d8486e3358b151ad2a7cb8e866ee456e",
-    tags: ["Concept", "UI Design", "Prototyping"],
+    tags: ["UI Design", "Prototyping", "Figma"],
     liveUrl: "https://www.figma.com/community/file/1491455039743664381",
     githubUrl: "",
     featured: false,
   },
-  // PLACEHOLDER: Add more projects here
 ];
 
 const ProjectCard = ({ project, index }) => {
@@ -60,8 +58,7 @@ const ProjectCard = ({ project, index }) => {
         ) : (
           <div className="w-full h-full bg-gradient-to-br from-neutral-800 to-neutral-900 flex items-center justify-center">
             <span className="text-neutral-600 text-sm">
-              {/* PLACEHOLDER: Add project image */}
-              Image placeholder
+              No preview available
             </span>
           </div>
         )}
@@ -156,12 +153,10 @@ const Projects = () => {
               Projects
             </span>
             <h2 className="text-3xl md:text-4xl font-display font-bold text-white mt-2">
-              {/* PLACEHOLDER: Section title */}
               Selected work
             </h2>
           </div>
           <p className="text-neutral-400 max-w-md">
-            {/* PLACEHOLDER: Section description */}
             A collection of projects I've worked on, from concept to deployment.
           </p>
         </motion.div>
@@ -181,9 +176,8 @@ const Projects = () => {
           transition={{ duration: 0.5 }}
           className="mt-12 text-center"
         >
-          {/* PLACEHOLDER: Link to all projects or GitHub */}
           <a
-            href="https://github.com"
+            href="https://github.com/ajinkyaghate"
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center gap-2 text-sm text-neutral-400 hover:text-white transition-colors"

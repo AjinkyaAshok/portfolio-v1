@@ -37,7 +37,6 @@ const Header = ({ refsMap }) => {
           className="text-lg font-display font-semibold tracking-tight text-white"
           whileHover={{ scale: 1.02 }}
         >
-          {/* PLACEHOLDER: Your name or logo */}
           <span className="text-neutral-400">@</span>ajinkya
         </motion.a>
 
@@ -54,7 +53,7 @@ const Header = ({ refsMap }) => {
             </button>
           ))}
           
-          {/* CTA Button - PLACEHOLDER: Can link to resume or calendar */}
+          {/* CTA Button */}
           <a
             href="#contact"
             className="ml-4 px-4 py-2 text-sm font-medium text-black bg-white 

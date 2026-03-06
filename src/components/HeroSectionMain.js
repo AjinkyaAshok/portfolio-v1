@@ -27,8 +27,7 @@ const HeroSectionMain = () => {
           <span className="inline-flex items-center gap-2 px-3 py-1.5 text-xs font-medium 
                          text-neutral-400 bg-white/5 border border-white/10 rounded-full">
             <span className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse" />
-            {/* PLACEHOLDER: Your availability status */}
-            Available for opportunities
+            Open to Frontend Engineer roles
           </span>
         </motion.div>
 
@@ -40,10 +39,8 @@ const HeroSectionMain = () => {
         >
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold 
                          tracking-tight text-white leading-[1.1] mb-6">
-            {/* PLACEHOLDER: Your name */}
             Hi, I'm Ajinkya
             <span className="block text-neutral-500 mt-2">
-              {/* PLACEHOLDER: Your role */}
               Frontend Engineer
             </span>
           </h1>
@@ -56,9 +53,8 @@ const HeroSectionMain = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-lg md:text-xl text-neutral-400 max-w-2xl leading-relaxed mb-10"
         >
-          {/* PLACEHOLDER: Your short bio / elevator pitch */}
-          I craft seamless digital experiences with React, TypeScript, and modern web technologies. 
-          Focused on building products that are both beautiful and performant.
+          3+ years building with React and Next.js App Router. Focused on RSC-first architectures, 
+          Core Web Vitals optimization, and shipping measurably faster user experiences.
         </motion.p>
 
         {/* CTA Buttons */}
@@ -93,11 +89,10 @@ const HeroSectionMain = () => {
           transition={{ duration: 0.5, delay: 0.4 }}
           className="flex items-center gap-4"
         >
-          {/* PLACEHOLDER: Your social links */}
           {[
-            { icon: Github, href: "https://github.com", label: "GitHub" },
-            { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-            { icon: Mail, href: "mailto:your@email.com", label: "Email" },
+            { icon: Github, href: "https://github.com/ajinkyaa", label: "GitHub" },
+            { icon: Linkedin, href: "https://linkedin.com/in/ajinkyaashok", label: "LinkedIn" },
+            { icon: Mail, href: "mailto:ajinkyaashokghate@gmail.com", label: "Email" },
           ].map(({ icon: Icon, href, label }) => (
             <a
               key={label}

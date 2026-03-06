@@ -1,38 +1,37 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Briefcase, Calendar, ExternalLink } from "lucide-react";
+import { Briefcase, Calendar, MapPin } from "lucide-react";
 
-// PLACEHOLDER: Your career/experience data
 const experienceData = [
   {
     role: "Software Engineer",
     company: "Procohat Technologies",
-    companyUrl: "", // PLACEHOLDER: Company website URL
+    location: "Nagpur, India",
     duration: "Oct 2021 – Aug 2022",
     type: "Full-time",
     description:
-      "Built and optimized scalable React applications using React, Redux, and Tailwind CSS. Improved efficiency by 20%, collaborated with cross-functional teams, and delivered data-driven insights.",
-    skills: ["React", "Redux", "Tailwind CSS", "TypeScript"],
+      "Built production React apps with Redux Toolkit. Reduced API response times ~20% via memoization and lazy loading. Cut bundle size 35% through route-based code splitting. Authored a 10+ component UI library with Storybook documentation.",
+    skills: ["React", "Redux Toolkit", "Tailwind CSS", "Storybook"],
   },
   {
     role: "Frontend Developer",
     company: "Quanscendence Technologies",
-    companyUrl: "", // PLACEHOLDER: Company website URL
+    location: "Bangalore, India",
     duration: "Apr 2020 – Oct 2021",
     type: "Full-time",
     description:
-      "Contributed to an EdTech startup using React, Tailwind, and GraphQL; improved app responsiveness by 25%, enhanced UX, and reduced development time by 20%.",
-    skills: ["React", "GraphQL", "Tailwind CSS", "REST APIs"],
+      "Translated 40+ Figma screens to responsive layouts at an EdTech startup. Integrated GraphQL with Apollo Client, reducing data transfer 30%. Improved app responsiveness 25% with optimistic UI updates and skeleton loaders.",
+    skills: ["React", "GraphQL", "Apollo Client", "Tailwind CSS"],
   },
   {
     role: "Software Development Intern",
     company: "Anadigi Corp.",
-    companyUrl: "", // PLACEHOLDER: Company website URL
+    location: "Pune, India",
     duration: "May 2019 – July 2019",
     type: "Internship",
     description:
-      "Assisted in building frontend components and learned best practices for scalable, maintainable codebases.",
-    skills: ["JavaScript", "HTML/CSS", "React"],
+      "Built reusable React UI components for internal dashboards. Improved page speed by ~20% through component optimization and code refactoring.",
+    skills: ["JavaScript", "React", "HTML/CSS"],
   },
 ];
 
@@ -52,7 +51,6 @@ const ExperienceTimeline = ({ timelineRef }) => {
             Experience
           </span>
           <h2 className="text-3xl md:text-4xl font-display font-bold text-white mt-2">
-            {/* PLACEHOLDER: Section title */}
             Where I've worked
           </h2>
         </motion.div>
@@ -84,20 +82,12 @@ const ExperienceTimeline = ({ timelineRef }) => {
                       <h3 className="text-lg font-semibold text-white">
                         {exp.role}
                       </h3>
-                      <div className="flex items-center gap-2 mt-1">
-                        {exp.companyUrl ? (
-                          <a
-                            href={exp.companyUrl}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="text-neutral-400 hover:text-white transition-colors flex items-center gap-1"
-                          >
-                            {exp.company}
-                            <ExternalLink size={12} />
-                          </a>
-                        ) : (
-                          <span className="text-neutral-400">{exp.company}</span>
-                        )}
+                      <div className="flex items-center gap-3 mt-1">
+                        <span className="text-neutral-400">{exp.company}</span>
+                        <span className="flex items-center gap-1 text-neutral-500 text-sm">
+                          <MapPin size={12} />
+                          {exp.location}
+                        </span>
                       </div>
                     </div>
                     <div className="flex items-center gap-4 text-sm text-neutral-500">
@@ -141,16 +131,17 @@ const ExperienceTimeline = ({ timelineRef }) => {
           transition={{ duration: 0.5 }}
           className="mt-16 text-center"
         >
-          {/* PLACEHOLDER: Your resume link */}
-          <button
-            type="button"
+          <a
+            href="/Ajinkya_Ghate_Resume.pdf"
+            target="_blank"
+            rel="noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium 
                        text-white bg-white/5 border border-white/10 rounded-lg 
                        hover:bg-white/10 hover:border-white/20 transition-all duration-200"
           >
             <Briefcase size={16} />
             View Full Resume
-          </button>
+          </a>
         </motion.div>
       </div>
     </section>

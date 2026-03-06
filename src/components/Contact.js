@@ -5,7 +5,6 @@ import { Mail, ArrowUpRight, Copy, Check } from "lucide-react";
 const ContactSection = () => {
   const [copied, setCopied] = React.useState(false);
 
-  // PLACEHOLDER: Your email
   const email = "ajinkyaashokghate@gmail.com";
 
   const handleCopy = () => {
@@ -14,11 +13,10 @@ const ContactSection = () => {
     setTimeout(() => setCopied(false), 2000);
   };
 
-  // PLACEHOLDER: Your social links
   const socialLinks = [
-    { name: "LinkedIn", url: "https://linkedin.com" },
-    { name: "GitHub", url: "https://github.com" },
-    { name: "Twitter", url: "https://twitter.com" },
+    { name: "LinkedIn", url: "https://linkedin.com/in/ajinkyaa" },
+    { name: "GitHub", url: "https://github.com/ajinkyaashok" },
+    { name: "Portfolio", url: "https://ajinkya.online" },
   ];
 
   return (
@@ -36,13 +34,11 @@ const ContactSection = () => {
             Contact
           </span>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mt-4 mb-6">
-            {/* PLACEHOLDER: CTA headline */}
             Let's work together
           </h2>
           <p className="text-lg text-neutral-400 max-w-xl mx-auto">
-            {/* PLACEHOLDER: Contact description */}
-            Have a project in mind or just want to chat? Feel free to reach out.
-            I'm always open to discussing new opportunities.
+            Have a project in mind or looking for a frontend engineer? 
+            I'm open to new opportunities and always happy to connect.
           </p>
         </motion.div>
 
@@ -129,7 +125,6 @@ const ContactSection = () => {
                           border border-green-500/20 rounded-full">
             <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
             <span className="text-sm text-green-400">
-              {/* PLACEHOLDER: Your availability */}
               Currently available for new opportunities
             </span>
           </div>
