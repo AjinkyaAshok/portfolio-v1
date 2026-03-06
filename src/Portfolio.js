@@ -3,47 +3,54 @@ import Footer from "./components/Footer";
 import HeroSectionMain from "./components/HeroSectionMain";
 import HeroSectionSecondary from "./components/HeroSectionSecondary";
 import ContactSection from "./components/Contact";
-import { AnimatedProjectsScroll } from "./components/Projects";
+import Projects from "./components/Projects";
 import Header from "./components/Header";
-import CareerTimeline from "./components/CareerTimeline";
-
+import ExperienceTimeline from "./components/ExperienceTimeline";
 
 const Portfolio = () => {
   const refsMap = {
     Home: useRef(null),
     About: useRef(null),
-    Career: useRef(null),
+    Experience: useRef(null),
     Projects: useRef(null),
     Contact: useRef(null),
   };
 
   return (
-    <div className="bg-[#0D0D0D]">
-      <div className="lg:w-8/12 m-auto shadow-2xl  shadow-black bg-[#0D0D0D] ">
-        <Header refsMap={refsMap} />
+    <div className="min-h-screen bg-[#0a0a0a]">
+      {/* Navigation */}
+      <Header refsMap={refsMap} />
 
-        <section ref={refsMap.Home}>
+      {/* Main Content */}
+      <main>
+        {/* Hero Section */}
+        <section ref={refsMap.Home} id="home">
           <HeroSectionMain />
         </section>
 
-        <section ref={refsMap.About}>
+        {/* About Section */}
+        <section ref={refsMap.About} id="about">
           <HeroSectionSecondary />
         </section>
 
-        <section ref={refsMap.Career}>
-          <CareerTimeline timelineRef={refsMap.Career} />
+        {/* Experience Section */}
+        <section ref={refsMap.Experience} id="experience">
+          <ExperienceTimeline />
         </section>
 
-        <section ref={refsMap.Projects}>
-          <AnimatedProjectsScroll />
+        {/* Projects Section */}
+        <section ref={refsMap.Projects} id="projects">
+          <Projects />
         </section>
 
-        <section ref={refsMap.Contact}>
+        {/* Contact Section */}
+        <section ref={refsMap.Contact} id="contact">
           <ContactSection />
         </section>
+      </main>
 
-        <Footer />
-      </div>
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };

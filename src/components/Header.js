@@ -1,102 +1,111 @@
-import React, { useState } from "react";
-import { motion } from "framer-motion";
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import MainImage from "../images/user_profile_picture.jpg";
 
-const NAV_ITEMS = ["Home", "About", "Career", "Projects", "Contact"];
+const NAV_ITEMS = ["Home", "About", "Experience", "Projects", "Contact"];
 
 const Header = ({ refsMap }) => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-  const handleScroll = (key) => {
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const handleNavClick = (key) => {
     refsMap[key]?.current?.scrollIntoView({ behavior: "smooth" });
+    setMenuOpen(false);
   };
 
   return (
     <motion.header
-      initial={{ y: -50, opacity: 0 }}
+      initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
-      className="sticky top-3 md:top-7 lg:top-10 mx-auto
-                 w-11/12 max-w-6xl flex justify-between items-center
-                 px-5 h-20 z-50 bg-white/10 border border-white/20
-                 backdrop-blur-md drop-shadow-lg text-white/80 rounded-2xl"
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled 
+          ? "bg-black/80 backdrop-blur-lg border-b border-white/5" 
+          : "bg-transparent"
+      }`}
     >
-      {/* Logo */}
-      <div className="flex items-center gap-3">
-        <img
-          src={MainImage}
-          alt="Profile"
-          className="w-10 h-10 rounded-full border border-white/30"
-        />
-        <h1 className="text-lg md:text-xl font-semibold tracking-wide">
-          Ajinkya Ashok
-        </h1>
-      </div>
-
-      {/* Desktop Nav */}
-      <nav className="hidden md:flex items-center gap-6 text-sm md:text-base">
-        {NAV_ITEMS.map((item) => (
-          <motion.button
-            key={item}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-            transition={{ type: "spring", stiffness: 300 }}
-            className="relative px-2 py-1 text-white/80 hover:text-white transition duration-200"
-            onClick={() => handleScroll(item)}
-          >
-            <span className="hover-underline-animation">{item}</span>
-          </motion.button>
-        ))}
-      </nav>
-
-      {/* Mobile Menu */}
-      <button
-        className="block md:hidden text-white"
-        onClick={() => setMenuOpen((prev) => !prev)}
-        aria-label="Toggle menu"
-      >
-        {menuOpen ? <X size={24} /> : <Menu size={24} />}
-      </button>
-
-      {menuOpen && (
-        <motion.nav
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3 }}
-          className="absolute top-20 left-0 w-full bg-black/90 backdrop-blur-lg
-                     border-t border-white/10 flex flex-col items-center py-4 md:hidden rounded-b-2xl"
+      <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+        {/* Logo */}
+        <motion.a
+          href="#"
+          className="text-lg font-display font-semibold tracking-tight text-white"
+          whileHover={{ scale: 1.02 }}
         >
+          {/* PLACEHOLDER: Your name or logo */}
+          <span className="text-neutral-400">@</span>ajinkya
+        </motion.a>
+
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex items-center gap-1">
           {NAV_ITEMS.map((item) => (
             <button
               key={item}
-              className="py-2 text-white/80 hover:text-white w-full text-center transition"
-              onClick={() => {
-                handleScroll(item);
-                setMenuOpen(false);
-              }}
+              onClick={() => handleNavClick(item)}
+              className="px-4 py-2 text-sm text-neutral-400 hover:text-white 
+                         transition-colors duration-200 rounded-lg hover:bg-white/5"
             >
               {item}
             </button>
           ))}
-        </motion.nav>
-      )}
+          
+          {/* CTA Button - PLACEHOLDER: Can link to resume or calendar */}
+          <a
+            href="#contact"
+            className="ml-4 px-4 py-2 text-sm font-medium text-black bg-white 
+                       rounded-lg hover:bg-neutral-200 transition-colors duration-200"
+          >
+            Let's Talk
+          </a>
+        </nav>
 
-      <style jsx>{`
-        .hover-underline-animation::after {
-          content: "";
-          position: absolute;
-          width: 0%;
-          height: 2px;
-          bottom: 0;
-          left: 0;
-          background-color: white;
-          transition: width 0.3s ease-in-out;
-        }
-        .hover-underline-animation:hover::after {
-          width: 100%;
-        }
-      `}</style>
+        {/* Mobile Menu Button */}
+        <button
+          className="md:hidden p-2 text-neutral-400 hover:text-white transition-colors"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle menu"
+        >
+          {menuOpen ? <X size={20} /> : <Menu size={20} />}
+        </button>
+      </div>
+
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {menuOpen && (
+          <motion.nav
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.2 }}
+            className="md:hidden bg-black/95 backdrop-blur-lg border-t border-white/5"
+          >
+            <div className="px-6 py-4 space-y-1">
+              {NAV_ITEMS.map((item) => (
+                <button
+                  key={item}
+                  onClick={() => handleNavClick(item)}
+                  className="block w-full text-left px-4 py-3 text-neutral-400 
+                             hover:text-white hover:bg-white/5 rounded-lg transition-colors"
+                >
+                  {item}
+                </button>
+              ))}
+              <a
+                href="#contact"
+                className="block w-full text-center mt-4 px-4 py-3 text-sm font-medium 
+                           text-black bg-white rounded-lg hover:bg-neutral-200 transition-colors"
+              >
+                Let's Talk
+              </a>
+            </div>
+          </motion.nav>
+        )}
+      </AnimatePresence>
     </motion.header>
   );
 };
