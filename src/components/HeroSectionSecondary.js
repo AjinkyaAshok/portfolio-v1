@@ -7,10 +7,12 @@ const HeroSectionSecondary = () => {
     { name: "React.js" },
     { name: "Next.js" },
     { name: "TypeScript" },
-    { name: "Tailwind CSS" },
+    { name: "JavaScript (​ES6+​)​" },
     { name: "Redux Toolkit" },
-    { name: "GraphQL" },
     { name: "TanStack Query" },
+    { name: "Zustand" },
+    { name: "Tailwind CSS" },
+    { name: "GraphQL" },
     { name: "Vercel AI SDK" },
   ];
 

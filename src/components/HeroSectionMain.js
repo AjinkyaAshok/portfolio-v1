@@ -90,7 +90,7 @@ const HeroSectionMain = () => {
           className="flex items-center gap-4"
         >
           {[
-            { icon: Github, href: "https://github.com/ajinkyaa", label: "GitHub" },
+            { icon: Github, href: "https://github.com/ajinkyaashok", label: "GitHub" },
             { icon: Linkedin, href: "https://linkedin.com/in/ajinkyaashok", label: "LinkedIn" },
             { icon: Mail, href: "mailto:ajinkyaashokghate@gmail.com", label: "Email" },
           ].map(({ icon: Icon, href, label }) => (

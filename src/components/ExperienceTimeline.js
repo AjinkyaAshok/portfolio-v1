@@ -10,7 +10,7 @@ const experienceData = [
     duration: "Oct 2021 – Aug 2022",
     type: "Full-time",
     description:
-      "Built production React apps with Redux Toolkit. Reduced API response times ~20% via memoization and lazy loading. Cut bundle size 35% through route-based code splitting. Authored a 10+ component UI library with Storybook documentation.",
+      "Improved search performance by debouncing API calls and normalizing Redux state for caching, cutting redundant requests (8–12/session) and reducing response time from 2.4s to 1.9s across 20 sessions. Reduced bundle size 35% (1.2MB → 780KB) via Webpack analysis and React lazy loading, and introduced a Storybook-based shared UI library (12 primitives) adopted by 3 squads to eliminate duplicate implementations.",
     skills: ["React", "Redux Toolkit", "Tailwind CSS", "Storybook"],
   },
   {
@@ -20,7 +20,7 @@ const experienceData = [
     duration: "Apr 2020 – Oct 2021",
     type: "Full-time",
     description:
-      "Translated 40+ Figma screens to responsive layouts at an EdTech startup. Integrated GraphQL with Apollo Client, reducing data transfer 30%. Improved app responsiveness 25% with optimistic UI updates and skeleton loaders.",
+      "Improved dashboard efficiency by batching GraphQL queries and normalizing the Apollo cache, eliminating duplicate network requests and cutting data transfer by 30%. Reduced React re-renders 14 → 3 with memoization and refactored 8 class components to hooks, boosting Lighthouse 61 → 78 and enabling reuse across 4 additional screens.",
     skills: ["React", "GraphQL", "Apollo Client", "Tailwind CSS"],
   },
   {

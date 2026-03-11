@@ -4,35 +4,47 @@ import { ExternalLink, Github, ArrowUpRight } from "lucide-react";
 
 const projectsData = [
   {
-    title: "Check-Inn Optimization",
+    title: "Train Stack",
     description:
-      "UX case study for delivery access management. Researched Blinkit/Zepto delivery flows to prototype streamlined check-ins for residential and commercial complexes.",
-    image: "https://s3-figma-hubfile-images-production.figma.com/hub/file/carousel/img/40ab4a62bf8e37e8df9d8fb26b2f9d112098ffcb/d13d493611ea393573e7f3d7fc37f9ba8a8fbe1a",
-    tags: ["Case Study", "UX Research", "Figma"],
-    liveUrl: "https://www.figma.com/community/file/1473705913486771548",
-    githubUrl: "",
+      "Built a real-time workout analysis app using Next + Zustand for lightweight state management, with Llama 3.1 via Groq API streaming sub-800 ms AI feedback; optimized to a 91 Lighthouse performance score.",
+    image: "./trainstack.png",
+    tags: ["Next", "Zustand", "Tanstack Query", "Groq API", "Tailwind CSS"],
+    liveUrl: "https://trainstackin.netlify.app",
+    githubUrl: "https://github.com/AjinkyaAshok/trainstack-next",
     featured: true,
   },
   {
     title: "Dash Dine",
     description:
       "Full-stack food delivery app built with React and Redux Toolkit. Implemented state architecture, memoization, and lazy loading for optimized performance.",
-    image: "",
+    image: "./dashdine.png",
     tags: ["React", "Redux Toolkit", "Tailwind CSS"],
     liveUrl: "https://dashdine.netlify.app",
-    githubUrl: "",
+    githubUrl: "https://github.com/AjinkyaAshok/dashDine",
     featured: true,
   },
   {
-    title: "Tindog",
+    title: "Check-Inn Optimization",
     description:
-      "A playful Tinder-for-dogs concept demonstrating creative UI design, swipe interactions, and engaging user flows.",
-    image: "https://s3-figma-hubfile-images-production.figma.com/hub/file/carousel/img/a7feea485ae7fc505784030fe5e5c1928855940a/e3f15078d8486e3358b151ad2a7cb8e866ee456e",
-    tags: ["UI Design", "Prototyping", "Figma"],
-    liveUrl: "https://www.figma.com/community/file/1491455039743664381",
+      "UX case study for delivery access management. Researched Blinkit/Zepto delivery flows to prototype streamlined check-ins for residential and commercial complexes.",
+    image:
+      "https://s3-figma-hubfile-images-production.figma.com/hub/file/carousel/img/40ab4a62bf8e37e8df9d8fb26b2f9d112098ffcb/d13d493611ea393573e7f3d7fc37f9ba8a8fbe1a",
+    tags: ["Case Study", "UX Research", "Figma"],
+    liveUrl: "https://www.figma.com/community/file/1473705913486771548",
     githubUrl: "",
-    featured: false,
+    featured: true,
   },
+  // {
+  //   title: "Tindog",
+  //   description:
+  //     "A playful Tinder-for-dogs concept demonstrating creative UI design, swipe interactions, and engaging user flows.",
+  //   image:
+  //     "https://s3-figma-hubfile-images-production.figma.com/hub/file/carousel/img/a7feea485ae7fc505784030fe5e5c1928855940a/e3f15078d8486e3358b151ad2a7cb8e866ee456e",
+  //   tags: ["UI Design", "Prototyping", "Figma"],
+  //   liveUrl: "https://www.figma.com/community/file/1491455039743664381",
+  //   githubUrl: "",
+  //   featured: false,
+  // },
 ];
 
 const ProjectCard = ({ project, index }) => {
@@ -62,10 +74,10 @@ const ProjectCard = ({ project, index }) => {
             </span>
           </div>
         )}
-        
+
         {/* Overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300" />
-        
+
         {/* Quick Links - Top Right */}
         <div className="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0">
           {project.liveUrl && (
@@ -110,9 +122,9 @@ const ProjectCard = ({ project, index }) => {
         {/* Title */}
         <h3 className="text-xl font-semibold text-white mb-2 flex items-center gap-2 group-hover:text-neutral-200 transition-colors">
           {project.title}
-          <ArrowUpRight 
-            size={18} 
-            className="text-neutral-500 group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" 
+          <ArrowUpRight
+            size={18}
+            className="text-neutral-500 group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"
           />
         </h3>
 
@@ -177,7 +189,7 @@ const Projects = () => {
           className="mt-12 text-center"
         >
           <a
-            href="https://github.com/ajinkyaghate"
+            href="https://github.com/ajinkyaashok"
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center gap-2 text-sm text-neutral-400 hover:text-white transition-colors"
