@@ -59,7 +59,7 @@ const ContactSection = () => {
                 <p className="text-sm text-neutral-500 mb-1">Email me at</p>
                 <a
                   href={`mailto:${email}`}
-                  className="text-xl md:text-2xl font-medium text-white hover:text-neutral-300 transition-colors"
+                  className="text-lg md:text-2xl font-medium text-white hover:text-neutral-300 transition-colors"
                 >
                   {email}
                 </a>
