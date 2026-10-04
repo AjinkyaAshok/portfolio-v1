@@ -27,7 +27,7 @@ const HeroSectionMain = () => {
           <span className="inline-flex items-center gap-2 px-3 py-1.5 text-xs font-medium 
                          text-neutral-400 bg-white/5 border border-white/10 rounded-full">
             <span className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse" />
-            Open to Frontend Engineer roles
+            Open to Software Engineer roles
           </span>
         </motion.div>
 
@@ -41,7 +41,7 @@ const HeroSectionMain = () => {
                          tracking-tight text-white leading-[1.1] mb-6">
             Hi, I'm Ajinkya
             <span className="block text-neutral-500 mt-2">
-              Frontend Engineer
+              Software Engineer - React & Next.js
             </span>
           </h1>
         </motion.div>
@@ -53,7 +53,7 @@ const HeroSectionMain = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-lg md:text-xl text-neutral-400 max-w-2xl leading-relaxed mb-10"
         >
-          3+ years building with React and Next.js App Router. Focused on RSC-first architectures, 
+          4 years building with React and Next.js App Router. Focused on RSC-first architectures, 
           Core Web Vitals optimization, and shipping measurably faster user experiences.
         </motion.p>
 

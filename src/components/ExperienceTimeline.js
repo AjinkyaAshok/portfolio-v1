@@ -5,33 +5,52 @@ import { Briefcase, Calendar, MapPin } from "lucide-react";
 const experienceData = [
   {
     role: "Software Engineer",
-    company: "Procohat Technologies",
+    company: "UElement",
+    location: "Pune, India",
+    duration: "Feb 2025 – June 2026",
+    type: "Full-time",
+    description:
+      "Optimized high-traffic dashboards using normalized Redux state and request deduplication, reducing API calls by 30%. Improved 10,000+ record workflows with memoization and component isolation, cutting re-renders by 60%. Parallelized API requests to reduce load times by 25% and built automated tests with Jest, RTL, and Cypress.",
+    skills: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Redux Toolkit",
+      "TanStack Query",
+      "Jest",
+      "Cypress",
+    ],
+  },
+  {
+    role: "Software Developer",
+    company: "Procohat",
     location: "Nagpur, India",
     duration: "Oct 2021 – Aug 2022",
     type: "Full-time",
     description:
-      "Improved search performance by debouncing API calls and normalizing Redux state for caching, cutting redundant requests (8–12/session) and reducing response time from 2.4s to 1.9s across 20 sessions. Reduced bundle size 35% (1.2MB → 780KB) via Webpack analysis and React lazy loading, and introduced a Storybook-based shared UI library (12 primitives) adopted by 3 squads to eliminate duplicate implementations.",
-    skills: ["React", "Redux Toolkit", "Tailwind CSS", "Storybook"],
+      "Reduced bundle size by 35%+ using Webpack analysis, React.lazy(), and route-based code splitting. Built a 12-component Tailwind UI library adopted by 3 squads through Storybook. Improved dashboard responsiveness by 25% through caching and request deduplication, and introduced GitHub Actions CI/CD.",
+    skills: [
+      "React",
+      "Redux Toolkit",
+      "Tailwind CSS",
+      "Storybook",
+      "GitHub Actions",
+    ],
   },
   {
     role: "Frontend Developer",
-    company: "Quanscendence Technologies",
+    company: "Quanscendence",
     location: "Bangalore, India",
     duration: "Apr 2020 – Oct 2021",
     type: "Full-time",
     description:
-      "Improved dashboard efficiency by batching GraphQL queries and normalizing the Apollo cache, eliminating duplicate network requests and cutting data transfer by 30%. Reduced React re-renders 14 → 3 with memoization and refactored 8 class components to hooks, boosting Lighthouse 61 → 78 and enabling reuse across 4 additional screens.",
-    skills: ["React", "GraphQL", "Apollo Client", "Tailwind CSS"],
-  },
-  {
-    role: "Software Development Intern",
-    company: "Anadigi Corp.",
-    location: "Pune, India",
-    duration: "May 2019 – July 2019",
-    type: "Internship",
-    description:
-      "Built reusable React UI components for internal dashboards. Improved page speed by ~20% through component optimization and code refactoring.",
-    skills: ["JavaScript", "React", "HTML/CSS"],
+      "Optimized GraphQL data fetching with Apollo Client, reducing data transfer by 30%. Reduced React re-renders from 14 to 3 using memoization, improving Lighthouse from 61 to 78. Refactored 8 class components to hooks, enabling reuse across 4 additional screens.",
+    skills: [
+      "React",
+      "GraphQL",
+      "Apollo Client",
+      "Tailwind CSS",
+    ],
   },
 ];
 

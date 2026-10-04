@@ -37,7 +37,7 @@ const ContactSection = () => {
             Let's work together
           </h2>
           <p className="text-lg text-neutral-400 max-w-xl mx-auto">
-            Have a project in mind or looking for a frontend engineer? 
+            Have a project in mind or looking for a software engineer? 
             I'm open to new opportunities and always happy to connect.
           </p>
         </motion.div>

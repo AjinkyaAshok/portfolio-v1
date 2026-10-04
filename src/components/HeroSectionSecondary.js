@@ -17,7 +17,7 @@ const HeroSectionSecondary = () => {
   ];
 
   const stats = [
-    { value: "3+", label: "Years Experience" },
+    { value: "4", label: "Years Experience" },
     { value: "20%", label: "Faster Load Times" },
     { value: "35%", label: "Bundle Size Reduced" },
   ];
@@ -68,18 +68,18 @@ const HeroSectionSecondary = () => {
             className="lg:col-span-2 p-8 bg-white/[0.02] border border-white/5 rounded-2xl 
                        hover:border-white/10 transition-all duration-300"
           >
-            <div className="flex flex-col md:flex-row gap-6">
+            <div className="flex flex-col md:flex-row gap-6 items-center">
               <img
                 src={ProfileImage}
                 alt="Profile"
-                className="w-24 h-24 rounded-2xl object-cover border border-white/10"
+                className="w-32 h-32 scale-110 rounded-2xl object-cover border border-white/10"
               />
               <div className="flex-1">
                 <h3 className="text-xl font-semibold text-white mb-3">
                   Ajinkya Ghate
                 </h3>
                 <p className="text-neutral-400 leading-relaxed">
-                  Frontend Engineer with 3+ years building production React and Next.js applications. 
+                  Software Engineer with 4 years building production React and Next.js applications. 
                   Reduced API response times by ~20% and cut bundle sizes through route-based code splitting. 
                   MSc in Business Analytics from University of Galway — I combine technical depth with data-driven insights.
                 </p>
